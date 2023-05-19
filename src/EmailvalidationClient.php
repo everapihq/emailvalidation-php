@@ -62,6 +62,7 @@ class EmailvalidationClient
      */
     public function validate(string $email, ?array $query = [])
     {
+		$query['email'] = $email;
         return $this->call('info', $query);
     }
 
